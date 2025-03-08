@@ -7,7 +7,7 @@
 
 @theme{
   --color-p1: #f9f9f9;
-  --color-p2: #0a0a0a;
+  --color-p2: #1f1f1fd3;
   /* --color-p3: #9aff04; */
   --color-p3: #7c25de;
   
@@ -20,7 +20,7 @@
 
 }
 red{
---color: #000;
+--color: #1f1f1fd3;
 --bg-color: #f9f9f9;
 --hover-bg-color: #e9e9e9;
 --primary-color: #e66622;

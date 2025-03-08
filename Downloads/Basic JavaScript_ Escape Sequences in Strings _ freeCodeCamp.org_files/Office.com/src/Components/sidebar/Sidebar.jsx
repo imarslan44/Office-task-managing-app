@@ -1,13 +1,11 @@
 import React from 'react'
 import './Sidebar.css'; // Make sure to create a CSS file for styling
-function Sidebar() {
-
-
+function Sidebar({openNav}) {
   return (
-    <div className=' sidebar h-screen bg-[#0a0a0a]  '>
+    <aside className={`sidebar h-screen bg-[#0a0a0a]  max-lg:absolute  ${openNav?"max-lg:left-0":"max-lg:-left-full"}`}>
     
     <div className="sidebar-header">
-        <h2> <img src="src/components/Navbars/logo.jpg" alt="" /> Baligo</h2>
+        <h2> <img src="src/components/Navbars/logo.jpg" alt="" /> OFFICE</h2>
         <div className='input-box'>
         <input type="text" placeholder="Search" className="search-bar" />
         <ion-icon name="search-outline"></ion-icon>
@@ -31,7 +29,7 @@ function Sidebar() {
           <li><ion-icon name="settings"></ion-icon> Settings</li>
         </ul>
       </div>
-    </div>
+    </aside>
   )
 }
 

@@ -2,13 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 import GetStart from './Components/GetStart-Components/GetStart'
 import Login from './Components/Login'
-import Dashboard from './Components/Admin Components/Admin Dashboard'
+import AdminPannel from './Components/Admin Components/AdminPannel'
 const App = () => {
 
 
   return (
-    <div className='App-conatiner'>
-      <Dashboard/>
+    <div className='App-conatiner flex'>
+      <AdminPannel/>
       {/* <Router>
         <Routes>
         <Route exact path="/" element={ <GetStart/>} />
