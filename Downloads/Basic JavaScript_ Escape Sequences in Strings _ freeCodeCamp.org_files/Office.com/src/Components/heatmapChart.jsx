@@ -2,21 +2,23 @@
 import React from 'react';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
-//import './HeatMap.css'; // Optional: for custom styles
+// import './HeatMap.css'; // Optional: for custom styles
 
 const HeatMap = () => {
   const today = new Date();
   const values = [
-    { date: '2023-01-01', count: 1 },
-    { date: '2023-01-02', count: 4 },
-    { date: '2023-01-03', count: 2 },
+    { date: '2024-12-31', count: 2 },
+    { date: '2024-12-02', count: 4 },
+    { date: '2025-01-03', count: 2 },
+    { date: '2025-01-04', count: 3 },
+    { date: '2025-03-08', count: 3 },
     // Add more data points here
   ];
 
   return (
-    <div className="heatmap-container w-[600px] h-300px">
+    <div className="heatmap-container col-span-6 row-start-2 bg-p1 h-60 m-5 rounded-lg ">
       <CalendarHeatmap
-        startDate={new Date(today.getFullYear(),4, 0)}
+        startDate={new Date(today.getFullYear(), 0, -101)}
         endDate={today}
         values={values}
         classForValue={(value) => {
@@ -30,7 +32,7 @@ const HeatMap = () => {
             'data-tip': `${value.date} has count: ${value.count}`,
           };
         }}
-        showWeekdayLabels={true}
+        showWeekdayLabels={false}
       />
     </div>
   );

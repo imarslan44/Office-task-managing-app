@@ -8,11 +8,11 @@ const AdminPannel = () => {
   
  }
   return (
-    <>
+    <section className='w-full h-screen flex'>
 
     <Sidebar openNav={openNav} />
     <AdminDashboard openNav={openNav} setOpenNav={setOpenNav}/>
-    </>
+    </section>
   )
 }
 
