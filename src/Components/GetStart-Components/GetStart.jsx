@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../NavBar'
+import NavBar from '../Header'
 import Hero from './Hero'
 const GetStart = () => {
   return (

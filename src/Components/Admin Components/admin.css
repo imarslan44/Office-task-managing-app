@@ -11,3 +11,13 @@
     padding: 5px;
     border-radius: 4px;
 }
+ul::-webkit-scrollbar{
+    position: absolute;
+    width: 2px;
+    overflow-x:visible;
+}
+ul::-webkit-scrollbar-thumb{
+    width: 1px;
+    background: #2727275b;
+    border-radius: 5px;
+}

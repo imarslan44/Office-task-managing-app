@@ -3,14 +3,14 @@ import { AuthContext } from '../context/AuthProvider'
 
 const TopEmployees = () => {
 const [employees, setEmployees] = useState(null)
-const {userData} = useContext(AuthContext);
+const [userData, setUserData ]= useContext(AuthContext);
 
 useEffect(() => {
   setEmployees(userData?.employees)
 }, [userData])
 
   return (
-    <div className='col-start-1 col-span-5 row-start-2 row-span-5 bg-p1   rounded-lg p-4'>
+    <div className='col-start-5 col-span-5 row-start-2 row-span-5 bg-p1   rounded-lg p-5 shadow-xs'>
         <h2 className='mb-2 text-p2 text-xl font-medium'>Top Employees</h2>
 
         <ul>

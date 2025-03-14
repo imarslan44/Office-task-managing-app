@@ -33,7 +33,7 @@ const BarChart = () => {
     },
   };
 
-  return <div className='col-start-1  col-span-5 row-start-7 row-span-full bg-white p-3 rounded-lg '>
+  return <div className='col-start-1  col-span-5 row-start-7 row-span-full bg-white  p-8 rounded-lg shadow-xs'>
     <h2 className='text-xl font-medium text-p2'>Tasks per month</h2>
   <Bar data={data} options={options} />
   </div>

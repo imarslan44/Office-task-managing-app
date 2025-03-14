@@ -52,7 +52,7 @@ const handleChange = (e) => {
 
 
   return (
-    <form className='flex flex-col  h-full   rounded-lg overflow-hidden xl:col-start-10 col-start-9 col-span-full row-start-2 row-span-full bg-p1 shadow-2xl p-5 max-lg:hidden'> 
+    <form className='flex flex-col  h-full   rounded-lg overflow-hidden xl:col-start-10 col-start-9 col-span-full row-start-2 row-span-full bg-p1 shadow-sm p-5 max-lg:hidden'> 
 
     <div className='w-full'>
          <div className='input-wrapper'>
