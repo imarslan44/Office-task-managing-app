@@ -1,12 +1,20 @@
 import React from 'react'
 import Button from './Button'
-const DashboardNav = () => {
+const DashboardNav = ({classes}) => {
   return (
-    <nav className='col-span-full items-center  flex justify-between pr-5'>
-      <h1 className='text-3xl font-medium text-p2'>Hello Arslan 👋</h1>
-      <Button content="Logout" classes={"px-3 h-10 "} onclick={()=>setOpenNav((prev)=>!prev)}>
+    <nav className={`w-full col-span-full  h-2 z-10 py-8 ${classes}`}>
+
+    <div className=' w-full col-span-full items-center  flex justify-between pr-5 h-full px-4'>
+
+      
+      <h1 className='lg:text-4xl sm:text-2xl text-2xl font-medium text-p2 '>Hello Arslan 👋</h1>
+      <Button content="Logout" classes={"px-3 h-10 max-sm:text-sm  max-sm:h-8 lg:text-xl"} onclick={()=>setOpenNav((prev)=>!prev)}>
         
     </Button>
+    </div>
+
+  
+
     </nav>
   )
 }

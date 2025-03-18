@@ -81,9 +81,9 @@
     margin-right: 10px;
   }
   .sidebar-section ul .active {
-    color: #000000eb;
+    color: #ffffffeb;
     border-radius: 5px;
-    background-color: #00aaff;
+    background-color: #7005f2;
   }
   .notification-badge {
     background-color: red;

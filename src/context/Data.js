@@ -18,7 +18,7 @@ const employees = [
         name: "Jane Smith", 
         email: "jane.smith@example.com", 
         password: "password456",
-        img: "src/images/employee-img-2.jpg",
+        img: "https://img.freepik.com/premium-photo/asian-female-employee-smile-office-background_333547-13506.jpg",
         profession: "Frontend Developer",
         tasks: [
             { active: true, completed: false, failed: false, title: "Market Research", description: "Conduct market research", taskDate: "2025-01-03", category: "Research", deadline: "2025-01-06", highPriority: false },
@@ -31,7 +31,7 @@ const employees = [
         name: "Alin sophie", 
         email: "tom.clark@example.com", 
         password: "password789",
-        img: "src/images/employe-img-1.jpg",
+        img: "https://th.bing.com/th/id/OIP.cQKhryTbEQCmVg7E9AjF-wHaEJ?w=626&h=351&rs=1&pid=ImgDetMain",
         profession: "Software Designer",
         tasks: [
             { active: true, completed: false, failed: false, title: "Code Review", description: "Review the codebase", taskDate: "2025-01-02", category: "Development", deadline: "2025-01-03", highPriority: true },

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import "./admin.css"
 
-function CreateTask() {
+function CreateTask({classes}) {
 
    
     const [inputVals, setinputVals] = useState({
@@ -52,7 +52,7 @@ const handleChange = (e) => {
 
 
   return (
-    <form className='flex flex-col  h-full   rounded-lg overflow-hidden xl:col-start-10 col-start-9 col-span-full row-start-2 row-span-full bg-p1 shadow-sm p-5 max-lg:hidden'> 
+    <form className={`flex flex-col xl:col-start-10  h-full   rounded-lg overflow-hidden  col-start-9 col-span-full row-start-2 row-span-full bg-p1 shadow-sm p-5 max-xl:col-start-10 max-lg:hidden overflow-y-auto  ${classes}`}>
 
     <div className='w-full'>
          <div className='input-wrapper'>
@@ -98,14 +98,14 @@ const handleChange = (e) => {
     <div className='divs'>
         <div className='input-wrapper'>
             <h3>Description </h3>
-            <textarea  id="" cols="30" rows="5" className='outline-none'
+            <textarea  id="" cols="30" rows="5" className='outline-none max-xl:h-18'
             name="description"
              value={inputVals.description}
              onChange={handleChange}
             ></textarea>
             <div>
                <button
-            className='border-2 border-gray-400 text-p1 w-full py-2  text-xl mt-2 rounded-sm  tracking-wide bg-p3'
+            className='border-2 border-p3 hover:bg-p1 hover:text-black hover:border-p2 text-p1 w-full py-2  text-xl mt-2 rounded-sm  tracking-wide bg-p3'
             onClick={SubmitForm}
             >Send  Task</button></div>
         
