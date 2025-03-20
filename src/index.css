@@ -5,19 +5,20 @@
   src: url(assets/Anton-Regular.ttf);
 }
 *{
-  color: #fff;
+  /* color: #fff; */
 }
 
 @theme{
   --color-p1: #ffff;
-  --color-p1: #0a0924;
+  /* --color-p1: #0a0924; */
   --color-p2: #1f1f1fd3;
   /* --color-p3: #9aff04; */
-  --color-p3: #7c25de;
-  --color-p3: #00aaff;
-   --color-p3: #72f;
-
-  --color-s1: #908382;
+  --color-p3: #17f;
+  /* --color-p3: #00aaff; */
+   /* --color-p3: #72f; */
+  /* --color-p3: #40ed; */
+  --color-p3:#8910c9;
+  --color-s1: gray;
   --color-s2: #17f; 
  --color-s3: #f7f7f8;
  

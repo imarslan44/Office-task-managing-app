@@ -9,8 +9,8 @@ const App = () => {
 
   return (
     <div className='App-conatiner flex'>
-    {/* <EmpDashboard></EmpDashboard> */}
-    <AdminPannel></AdminPannel>
+    <EmpDashboard></EmpDashboard>
+    {/* <AdminPannel></AdminPannel> */}
       {/* <Router>
         <Routes>
         <Route exact path="/" element={ <GetStart/>} />

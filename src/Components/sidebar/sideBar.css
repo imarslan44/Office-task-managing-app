@@ -1,7 +1,7 @@
 
 
 .sidebar {
-    background-color: #212121;
+    background: linear-gradient(150deg, #6f016d, #3f016f) ;
     color: white;
     padding: 20px;
     font-size: 25px;
@@ -81,9 +81,12 @@
     margin-right: 10px;
   }
   .sidebar-section ul .active {
-    color: #ffffffeb;
+    color: #060606eb;
     border-radius: 5px;
-    background-color: #7005f2;
+    background-color: #f7f7f7;
+  }
+  .sidebar-section ul .active ion-icon{
+    color:#0000;
   }
   .notification-badge {
     background-color: red;

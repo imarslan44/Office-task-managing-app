@@ -9,7 +9,7 @@ const EmpDashboard = () => {
     <section className='w-full h-screen grid bg-gray-100 grid-cols-12 grid-rows-10 p-4'>
     <DashboardNav/>
      
-     <HeatMap/>
+   
   
     </section>
     </>

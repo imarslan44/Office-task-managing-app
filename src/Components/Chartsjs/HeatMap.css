@@ -1,0 +1,48 @@
+/* filepath: c:\Users\91705\Downloads\Basic JavaScript_ Escape Sequences in Strings _ freeCodeCamp.org_files\Office.com\src\Components\Chartsjs\HeatMap.css */
+.heatmap-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .color-empty {
+    fill: #ebedf0;
+  }
+  
+  .color-scale-1 {
+    fill: #c6e48b;
+  }
+  
+  .color-scale-2 {
+    fill: #7bc96f;
+  }
+  
+  .color-scale-3 {
+    fill: #239a3b;
+  }
+  
+  .color-scale-4 {
+    fill: #196127;
+  }
+  
+  .outline-1 {
+    border: 1px solid #ccc;
+  }
+  
+  .rounded-sm {
+    border-radius: 4px;
+  }
+  
+  .px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .p1 {
+    padding: 2px;
+  }
+  
+  .mb-5 {
+    margin-bottom: 20px;
+  }

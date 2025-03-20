@@ -16,7 +16,7 @@ const HeatMap = () => {
   ];
 
   return (
-    <div className="heatmap-container  bg-p1  rounded-lg  w-full h-full row-start-2 row-span-3 col-start-1 col-span-6">
+    <div className="heatmap-container  bg-p1  rounded-lg  w-full h-full row-start-2 row-span-4 col-start-1 col-span-6">
 <select name="" id="" className='outline-1 rounded-sm px-3 p1'>
   <option value="By Month">By Month</option>
   <option value="By Month">By Annual</option>

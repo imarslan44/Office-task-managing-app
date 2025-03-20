@@ -55,7 +55,7 @@ const LineChartWithFill = ({classes}) => {
   };
 
   return(   
-  <div className={`col-start-6 col-span-4 row-start-7 row-span-full bg-p1 rounded-md p-4 shadow-xl shadow-gray-300 ${classes}`}>
+  <div className={`col-start-6 col-span-4 row-start-7 row-span-full bg-p1 rounded-md p-4 shadow-xl shadow-s1/10 ${classes}`}>
    <h3 className='text-2xl pb-5 font-medium text-p2 '>Growth Over time</h3>
    <Line data={data} options={options} style={{ height: '205px' }} />
    </div>

@@ -32,7 +32,7 @@ const TasksOv = ({data,classes}) => {
 
 
   return (
-    <div className={`col-start-1 col-span-4 row-start-2  row-span-5 bg-p1 rounded-md p-4 shadow-xl shadow-gray-200 ${classes}`}>
+    <div className={`col-start-1 col-span-4 row-start-2  row-span-5 bg-p1 rounded-md p-4 shadow-xl shadow-s1/10 ${classes}`}>
 
     <div className='w-full   h-full  relative'>
 

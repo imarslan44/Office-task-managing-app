@@ -10,7 +10,7 @@ useEffect(() => {
 }, [data])
 
   return (
-    <div className={`col-start-5 col-span-5 row-start-2 row-span-5 bg-p1   rounded-lg p-5 shadow-xl shadow-gray-200 sm:overflow-auto ${classes}`}>
+    <div className={`col-start-5 col-span-5 row-start-2 row-span-5 bg-p1   rounded-lg p-5 shadow-xl shadow-s1/10 sm:overflow-auto ${classes}`}>
   
         <h2 className='mb-2 text-p2 text-2xl max-sm:text-xl font-medium'>Top Employees</h2>
 
