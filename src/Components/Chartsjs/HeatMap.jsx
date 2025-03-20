@@ -1,10 +1,9 @@
-// filepath: c:\Users\91705\Downloads\Basic JavaScript_ Escape Sequences in Strings _ freeCodeCamp.org_files\Office.com\src\Components\HeatMap.jsx
 import React from 'react';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
-// import './HeatMap.css'; // Optional: for custom styles
+import './HeatMap.css'; // Import custom styles
 
-const HeatMap = () => {
+const HeatMap = ({ classes }) => {
   const today = new Date();
   const values = [
     { date: '2024-12-31', count: 2 },
@@ -16,14 +15,9 @@ const HeatMap = () => {
   ];
 
   return (
-    <div className="heatmap-container  bg-p1  rounded-lg  w-full h-full row-start-2 row-span-4 col-start-1 col-span-6">
-<select name="" id="" className='outline-1 rounded-sm px-3 p1'>
-  <option value="By Month">By Month</option>
-  <option value="By Month">By Annual</option>
-</select>
-
+    <div className={`heatmap-container bg-p1 rounded-lg w-full h-full z-10 ${classes}`}>
       <CalendarHeatmap
-        startDate={new Date(today.getFullYear(), 0, -101)}
+        startDate={new Date(today.getFullYear(), 0, 1)}
         endDate={today}
         values={values}
         classForValue={(value) => {
@@ -38,6 +32,7 @@ const HeatMap = () => {
           };
         }}
         showWeekdayLabels={false}
+        gutterSize={1}
       />
     </div>
   );

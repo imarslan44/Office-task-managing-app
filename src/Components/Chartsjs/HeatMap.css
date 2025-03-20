@@ -44,5 +44,12 @@
   }
   
   .mb-5 {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
   }
+  [data-tip] {
+    position: relative;
+    cursor: pointer;
+    width: 3px;
+    height: 3px;
+  }
+

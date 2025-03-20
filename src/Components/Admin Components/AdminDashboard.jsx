@@ -24,7 +24,7 @@ const AdminDashboard = ({openNav, setOpenNav}) => {
     <TopEmployee data={data} classes={''}/>
    
     <TasksOv data={data} classes={'max-sm:min-h-[600px]'}/>
-    <BarChart classes={'max-sm:scale-100 max-sm:p-1 max-sm:shadow-none'}/> 
+    <BarChart classes={' max-sm:p-1 max-sm:shadow-none col-start-1  col-span-5 row-start-7 row-span-full pb-8'}/> 
     <LineChartWithFill />
     <CreateTask classes={'shadow-xl shadow-s1/10'}/>
    

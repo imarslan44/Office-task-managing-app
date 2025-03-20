@@ -8,13 +8,13 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const BarChart = ({classes}) => {
   const data = {
-    labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Monthly Tasks Submitted',
         data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: '#70f',
-        borderColor: '#71f',
+        backgroundColor: '#8910c9',
+        borderColor: '#70f',
         borderWidth: 1,
       },
     ],
@@ -25,6 +25,12 @@ const BarChart = ({classes}) => {
     plugins: {
       legend: {
         position: 'top',
+        labels: {
+          padding: 0,
+          font: {
+            size: 16,
+          },
+        },
       },
       title: {
         display: false,
@@ -33,8 +39,9 @@ const BarChart = ({classes}) => {
     },
   };
 
-  return <div className={`col-start-1  col-span-5 row-start-7 row-span-full bg-p1  pb-8 p-4 rounded-lg shadow-xl shadow-s1/10 ${classes}`}>
-    <h2 className='text-2xl font-medium text-p2'>Tasks per month</h2>
+  
+  return <div className={` bg-p1  p-4 rounded-lg shadow-xl shadow-s1/10 ${classes}`}>
+   
   <Bar data={data} options={options} />
   </div>
 };
