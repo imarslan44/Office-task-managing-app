@@ -21,7 +21,7 @@ const AdminDashboard = ({openNav, setOpenNav}) => {
     <span className="bg-gray-200 px-2 py-1 rounded-md">Top Employees</span>
     <span className="bg-gray-200 px-2 py-1 rounded-md">Create Task</span>
   </div>
-    <TopEmployee data={data} classes={''}/>
+    <TopEmployee classes={''}/>
    
     <TasksOv data={data} classes={'max-sm:min-h-[600px]'}/>
     <BarChart classes={' max-sm:p-1 max-sm:shadow-none col-start-1  col-span-5 row-start-7 row-span-full pb-8'}/> 

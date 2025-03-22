@@ -1,42 +1,44 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider';
 
+const TopEmployees = ({ classes }) => {
+  const [employees, setEmployees] = useState(null);
+  const [data] = useContext(AuthContext);
 
-const TopEmployees = ({data, classes}) => {
-const [employees, setEmployees] = useState(null)
-
-
-useEffect(() => {
-  setEmployees(data?.employees)
-}, [data])
+  useEffect(() => {
+    setEmployees(data?.employees);
+  }, [data]);
 
   return (
-    <div className={`col-start-5 col-span-5 row-start-2 row-span-5 bg-p1   rounded-lg p-5 shadow-xl shadow-s1/10 sm:overflow-auto ${classes}`}>
-  
-        <h2 className='mb-2 text-p2 text-2xl max-sm:text-xl font-medium'>Top Employees</h2>
+    <div className={`bg-p1 rounded-lg p-5 shadow-xl ${classes}`}>
+      <h2 className='mb-2 text-p2 text-xl font-medium tracking-tight'>Top Employees</h2>
+      <ul>
 
-        <ul >
-          {
-           employees?.map((e,idx)=>{
-            return <li key={idx} className='flex justify-between py-4 rounded-sm border-b-1   border-gray-300 items-center hover:bg-gray-200'>
-              <div className='flex w-2/3 '>
-              <span className='inline-block text-xl text-black h-5 my-auto'>{idx + 1}.</span>
-              <img src={e.img} alt="" className='w-10 h-10 border-1 rounded-md object-cover bg-top mx-2 my-auto'/>
-              <div className='flex flex-col  '>
-              <span className='  text-p2 text-lg max-sm:text-md'>{e.name}</span>
-              <span className='  text-p2/60 max-sm:text-xs'>{e.profession}</span>
-              </div>
-              </div>
-              <span className=' text-center w-15 text-p2 max-sm:text-sm' >{e.tasks.length}</span>
-              <span className=' text-center max-sm:text-sm w-15'>44-Pts</span>
-              
-              </li>
-           })
-          }
-          
-        </ul>
+      <div id='nav' className='bg- w-full  flex justify-between border-b-2 border-p2/60  pl-5 py-2 font-medium '>
+        <span className='text-p2' >Employee</span>
+        <div className='w-4/10 flex justify-between'><span className=' text-blue-700/80'>Completed</span><span className='text-green-700/80'>pts</span></div>
+      </div>
+
+        {employees?.map((e, idx) => (
+          <li key={idx} className='flex justify-between py-3 rounded-sm border-b border-gray-300 items-center hover:bg-gray-200 overflow-y-auto'>
+
+            <div className='flex w-6/11 items-center h-full'>
         
+              <span className='inline-block text-xl text-p2/30 h-5 my-auto'>{idx + 1}.</span>
+              <img src={e.img} alt="" className='w-10 h-10 border rounded-md object-cover bg-top mt-2 mr-2 ml-1 ' />
+          
+              <div className='flex flex-col  h-full justify-center '>
+                <span className='text-p2/90 text-lg'>{e.name}</span>
+                <span className='text-p2/60 text-sm/2'>{e.profession}</span>
+              </div>
+            </div>
+            <span className='text-center w-15  text-blue-700/80'>{e.tasks.length} Tasks</span>
+            <span className='text-center  text-green-700/80'>44</span>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default TopEmployees
+export default TopEmployees;
