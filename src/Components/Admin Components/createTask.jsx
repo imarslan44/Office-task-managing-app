@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import "./admin.css"
-
+import { useDispatch, useSelector } from 'react-redux';
+import { sendTaskToEmployee } from '../../context/Context';
 function CreateTask({classes}) {
-
-   
     const [inputVals, setinputVals] = useState({
       title:"",
       date: "",
@@ -13,8 +12,9 @@ function CreateTask({classes}) {
    
    });
 
-
-
+   const dispatch = useDispatch()
+   const data = useSelector(state=>state);
+   const employees = data.employees
 
 const handleChange = (e) => {
    
@@ -27,12 +27,22 @@ const handleChange = (e) => {
  };
 
  const SubmitForm = (e)=>{
-   // e.preventDefault()
+    e.preventDefault()
 
-   const isValidName = employees.some(e => e.name === inputVals.employeeName);
+   const isValidName = employee.some(e => e.name === inputVals.employeeName);
+
+   dispatch(sendTaskToEmployee({
+    title:"hello",
+    date: "12-12-25",
+    employeeName: "John Doe",
+    catagory: "text",
+    description: "description this is adescription and i am checking it "
+ 
+ }))
+ localStorage.setItem("state", state)
    
    if(isValidName){
-      const selectedEmployee =
+   const selectedEmployee =
      employees.find(e=>e.name === inputVals.employeeName);
    selectedEmployee.tasks.push(inputVals)
    localStorage.setItem("employees", JSON.stringify(users.employees))

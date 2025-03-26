@@ -1,16 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthProvider';
+import { useSelector } from 'react-redux';
 
 const TopEmployees = ({ classes }) => {
-  const [employees, setEmployees] = useState(null);
-  const [data] = useContext(AuthContext);
+ 
+  const employees = useSelector(state=>state.employees)
 
-  useEffect(() => {
-    setEmployees(data?.employees);
-  }, [data]);
+
 
   return (
-    <div className={`bg-p1 rounded-lg p-5 shadow-xl ${classes}`}>
+    <div className={`bg-p1 rounded-lg p-5 shadow-xl sm:overflow-y-auto ${classes}`}>
       <h2 className='mb-2 text-p2 text-xl font-medium tracking-tight'>Top Employees</h2>
       <ul>
 
@@ -20,11 +19,12 @@ const TopEmployees = ({ classes }) => {
       </div>
 
         {employees?.map((e, idx) => (
-          <li key={idx} className='flex justify-between py-3 rounded-sm border-b border-gray-300 items-center hover:bg-gray-200 overflow-y-auto'>
+          <li key={idx} className='flex justify-between py-3 rounded-sm border-b border-gray-300 items-center hover:bg-gray-200 '>
 
             <div className='flex w-6/11 items-center h-full'>
         
               <span className='inline-block text-xl text-p2/30 h-5 my-auto'>{idx + 1}.</span>
+              {console.log(e.img)}
               <img src={e.img} alt="" className='w-10 h-10 border rounded-md object-cover bg-top mt-2 mr-2 ml-1 ' />
           
               <div className='flex flex-col  h-full justify-center '>

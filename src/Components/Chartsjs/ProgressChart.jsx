@@ -65,12 +65,12 @@ const TaskProgressChart = () => {
   return (
     <div className="task-progress-chart-container col-span-5 bg-p1 row-span-5 flex items-center ">
       <div className="flex  items-center justify-center ">
-      <div className="flex justify-between w-55 bg-orange-100 rounded-lg p-4 flex-col text-2xl h-30 items-between">
-          <span className="text-p2">Completed Tasks</span>
-          <span className="text-p2">Remaining Tasks</span>
+      <div className="flex justify-between w-40  rounded-lg p-8 bg-linear-to-br flex-col text-2xl h-30 items-between text-nowrap font-medium">
+          <span className="text-p2 tracking-tighter   h-full p-">Completed Tasks</span>
+          <span className="text-p2 tracking-tighter   h-full p-">Remaining Tasks</span>
         </div>
         
-        <Doughnut data={data} options={options}style={{ width: "1rem", height: "1rem", display:"grid", placeContent: "center", transform: "translateY(-5%)", padding: "0px",margin: 0,  scale: .4, }}/>
+        <Doughnut data={data} options={options}style={{ width: "2rem", height: "2rem", display:"grid", placeContent: "center", transform: "translateY(-5%)", padding: "0px",margin: 0,  scale: .2,  }}/>
         
       </div>
 

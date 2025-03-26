@@ -1,12 +1,12 @@
 import React from 'react'
 import NavBar from '../Header'
 import Hero from './Hero'
-const GetStart = () => {
+const GetStart = ({handleLogOut,isLogedin}) => {
   return (
     <main>
      
     <NavBar/>
-    <Hero/>
+    <Hero  handleLogOut={handleLogOut}/>
     </main>
   )
 }

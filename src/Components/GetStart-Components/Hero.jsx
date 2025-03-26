@@ -1,8 +1,10 @@
 import React from 'react'
 import Button from '../Button'
 import { Link } from 'react-router-dom'
-const Hero = () => {
-
+import { useContext } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
+const Hero = ({handleLogout}) => {
+const [userRole] = useContext(AuthContext)
   return (
 
     
@@ -14,7 +16,7 @@ const Hero = () => {
        <p className='text-2xl text-slate-700 pb-4  pr-40 '>Manage Your Office Tasks Much more  efficiently
         and get clear view of your team progress.
        </p>
-     <Link to="/signIn/signUp">
+     <Link to={`/dashboard`}>
      <Button content="Get Started" classes="py-3 px-10 text-2xl  tracking-wide font text-white hover:text-black "/>
      </Link>
       </div>

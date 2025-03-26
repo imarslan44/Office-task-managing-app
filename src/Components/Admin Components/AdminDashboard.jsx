@@ -7,10 +7,12 @@ import TopEmployee from '../TopEmployee'
 import TasksOv from './tasksOv'
 import DashboardNav from '../dashboardNav'
 import { AuthContext } from '../../context/AuthProvider'
+import { useSelector } from 'react-redux'
 
 
 const AdminDashboard = ({openNav, setOpenNav}) => {
-  const [data] = useContext(AuthContext)
+  const data = useSelector(state=>state)
+
 
   return (
     <section className='w-full h-screen  bg-s1/10 grid grid-cols-12 grid-rows-10 p-3 pt-0 gap-5 max-lg:grid-cols-8 max-sm:flex max-sm:flex-col  max-sm:gap-0 max-sm:px-0 '>
@@ -21,7 +23,7 @@ const AdminDashboard = ({openNav, setOpenNav}) => {
     <span className="bg-gray-200 px-2 py-1 rounded-md">Top Employees</span>
     <span className="bg-gray-200 px-2 py-1 rounded-md">Create Task</span>
   </div>
-    <TopEmployee classes={''}/>
+    <TopEmployee classes={'col-starrt-7 col-span-5 row-start-2 row-span-5 overFlow-y-auto'}/>
    
     <TasksOv data={data} classes={'max-sm:min-h-[600px]'}/>
     <BarChart classes={' max-sm:p-1 max-sm:shadow-none col-start-1  col-span-5 row-start-7 row-span-full pb-8'}/> 

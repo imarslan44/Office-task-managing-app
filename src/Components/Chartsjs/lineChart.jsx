@@ -9,10 +9,10 @@ const LineChartWithFill = ({classes}) => {
     labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Task Submission rate',
         data: [60, 60, 20, 120, 70, 70, 70],
         borderColor: '#70f',
-        backgroundColor: '',
+        backgroundColor: '#71f',
         fill: false,
         borderWidth: 2, // Thin line
         pointRadius: 1, // Remove dots
@@ -27,6 +27,7 @@ const LineChartWithFill = ({classes}) => {
     plugins: {
       legend: {
         display: false, // Hide legend
+        
       },
       title: {
         display: false, // Hide title
@@ -56,7 +57,7 @@ const LineChartWithFill = ({classes}) => {
 
   return(   
   <div className={`col-start-6 col-span-4 row-start-7 row-span-full bg-p1 rounded-md p-4 shadow-xl shadow-s1/10 ${classes}`}>
-   <h3 className='text-2xl pb-5 font-medium text-p2 '>Growth Over time</h3>
+   <h3 className='text-2xl pb-5 font-medium text-p2 '></h3>
    <Line data={data} options={options} style={{ height: '205px' }} />
    </div>
   )
