@@ -15,6 +15,7 @@ const TaskOv = () => {
     Pending Tasks 4
     </div>
     <div className={`flex-1 p-8 bg-p1 shadow-sm`}>
+   
      Completed Tasks 6
     </div>
  </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css'; // Make sure to create a CSS file for styling
 
 function Sidebar({openNav}) {
@@ -14,15 +14,15 @@ function Sidebar({openNav}) {
       <div className="sidebar-section">
         <h3>Application</h3>
         <ul>
-        <Link to="/dashboard"><li><ion-icon name="pie-chart"></ion-icon> Dashboard</li></Link>
-        <Link to="/tasks">
-        <li className='active'><ion-icon name="checkmark-done-outline"></ion-icon>Tasks
-        </li></Link>
+        <NavLink to="/dashboard"><li><ion-icon name="pie-chart"></ion-icon> Dashboard</li></NavLink>
+        <NavLink to="/tasks">
+        <li className=''><ion-icon name="checkmark-done-outline"></ion-icon>Tasks
+        </li></NavLink>
 
-        <Link to="/timeline"><li><ion-icon name="calendar"></ion-icon> Timeline</li></Link>
+        <NavLink to="/timeline"><li><ion-icon name="calendar"></ion-icon> Timeline</li></NavLink>
 
-        <Link to="/users"> <li><ion-icon name="person">
-          </ion-icon> Users</li></Link>
+        <NavLink to="/users"> <li><ion-icon name="person">
+          </ion-icon> Users</li></NavLink>
         </ul>
       </div>
       <div className="sidebar-section">
@@ -32,8 +32,8 @@ function Sidebar({openNav}) {
           {/* <li><ion-icon name="mail-unread"></ion-icon> Messages<span className="notification-badge">2</span></li> */}
           <li><ion-icon name="settings"></ion-icon> Settings</li>
 
-          <Link to="/signIn/signUp"><li className='tracking-tight font-thin text-2xl' style={{color:"#f2f2f2",}} ><ion-icon name="log-out-outline" 
-          style={{color:"", fontWeight: "bold"}}></ion-icon>Exit-Login</li></Link>
+          <NavLink to="/signIn/signUp"><li className='tracking-tight font-thin text-2xl' style={{color:"#f2f2f2",}} ><ion-icon name="log-out-outline" 
+          style={{color:"", fontWeight: "bold"}}></ion-icon>Exit-Login</li></NavLink>
         </ul>
       </div>
     </aside>

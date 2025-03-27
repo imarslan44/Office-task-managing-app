@@ -29,16 +29,9 @@ const handleChange = (e) => {
  const SubmitForm = (e)=>{
     e.preventDefault()
 
-   const isValidName = employee.some(e => e.name === inputVals.employeeName);
+   const isValidName = employees.some(e => e.name === inputVals.employeeName);
 
-   dispatch(sendTaskToEmployee({
-    title:"hello",
-    date: "12-12-25",
-    employeeName: "John Doe",
-    catagory: "text",
-    description: "description this is adescription and i am checking it "
- 
- }))
+   dispatch(sendTaskToEmployee(inputVals))
  localStorage.setItem("state", state)
    
    if(isValidName){

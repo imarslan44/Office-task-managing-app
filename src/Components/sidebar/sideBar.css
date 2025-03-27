@@ -83,7 +83,7 @@
 
   
   
-  .sidebar-section ul .active {
+  .sidebar-section ul .active li{
     color: #060606eb;
     border-radius: 5px;
     background-color: #f7f7f7;
