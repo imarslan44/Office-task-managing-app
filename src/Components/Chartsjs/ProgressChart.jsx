@@ -4,7 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const TaskProgressChart = () => {
+const TaskProgressChart = ({classes}) => {
   const data = {
     labels: [],
     datasets: [
@@ -63,7 +63,7 @@ const TaskProgressChart = () => {
   };
 
   return (
-    <div className="task-progress-chart-container col-span-5 bg-p1 row-span-5 flex items-center ">
+    <div className={`task-progress-chart-container col-span-5 bg-p1 row-span-5 flex items-center ${classes}`}>
       <div className="flex  items-center justify-center ">
       <div className="flex justify-between w-40  rounded-lg p-8 bg-linear-to-br flex-col text-2xl h-30 items-between text-nowrap font-medium">
           <span className="text-p2 tracking-tighter   h-full p-">Completed Tasks</span>
